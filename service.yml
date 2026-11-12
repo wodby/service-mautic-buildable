@@ -1,0 +1,37 @@
+name: mautic-buildable
+type: service
+icon: mautic
+title: Mautic (buildable)
+from: mautic
+fromVersionConstraint: "^1.0.0"
+fromVersion: "1.0.2"
+guidance: GUIDANCE.md
+
+labels:
+- mautic
+
+# PHP versions of wodby/mautic-php: PHP-FPM and Apache with Wodby's setup for
+# Mautic, without Mautic. The build installs the app repository's Mautic
+# Composer project, whose composer.lock pins Mautic.
+options:
+- version: '8.4'
+  tag: 8.4-r0
+  default: true
+
+build:
+  connect: true
+  dockerfile: Dockerfile
+  boilerplates:
+  - name: vanilla
+    title: Vanilla Mautic
+    repo: https://github.com/wodby/mautic-boilerplate
+    branch: main
+
+# The image is built from the app repository on top of wodby/mautic-php. The
+# cron and queue workers run the same image.
+workloads:
+- name: main
+  containers:
+  - name: php
+    image: wodby/mautic-php
+    build: true
