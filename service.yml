@@ -4,7 +4,7 @@ icon: mautic
 title: Mautic (buildable)
 from: mautic
 fromVersionConstraint: "^1.0.0"
-fromVersion: "1.0.2"
+fromVersion: "1.0.3"
 guidance: GUIDANCE.md
 
 labels:
@@ -15,7 +15,7 @@ labels:
 # Composer project, whose composer.lock pins Mautic.
 options:
 - version: '8.4'
-  tag: 8.4-r0
+  tag: 8.4-r1
   default: true
 
 build:
