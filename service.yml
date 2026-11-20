@@ -4,7 +4,7 @@ icon: mautic
 title: Mautic (buildable)
 from: mautic
 fromVersionConstraint: "^1.0.0"
-fromVersion: "1.0.5"
+fromVersion: "1.0.6"
 guidance: GUIDANCE.md
 
 labels:
@@ -16,6 +16,7 @@ labels:
 options:
 - version: '8.4'
   tag: 8.4-r4
+  digest: sha256:b75a7da446878c9bd7b843c8d6cb73958a0d41b20fb9b00534e03e6bd5709db5
   default: true
 
 build:
