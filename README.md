@@ -22,7 +22,7 @@ Apache and Wodby's setup for Mautic.
 | Type | Application service |
 | Image | Built from your repository on top of [`wodby/mautic-php`](https://github.com/wodby/mautic-php) |
 | Application build | Your Mautic Composer project; start from the [Mautic boilerplate](https://github.com/wodby/mautic-boilerplate) |
-| Operations | Installs or updates Mautic and registers your plugins after every deployment |
+| Operations | Installs or updates Mautic and registers your plugins on every deployment, before the rollout |
 
 To have Wodby keep Mautic up to date instead, use the [Mautic service](https://github.com/wodby/service-mautic): it
 needs no repository or build.

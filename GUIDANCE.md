@@ -26,8 +26,8 @@ deploying; the deployment runs the database migrations.
 
 ## Plugins and themes
 
-Plugins and themes are installed with Composer into `docroot/plugins/` and `docroot/themes/`, or committed there. After
-every deployment the **Install or upgrade Mautic** action runs `mautic-update`, as the mautic service does, which ends
+Plugins and themes are installed with Composer into `docroot/plugins/` and `docroot/themes/`, or committed there. On
+every deployment the **Install or upgrade Mautic** action runs `mautic-update` before the new version rolls out, as the mautic service does, which ends
 with `mautic:plugins:reload`: plugins new in the repository are registered and installed ones are updated.
 
 ## Workers
