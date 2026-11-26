@@ -4,7 +4,7 @@ icon: mautic
 title: Mautic (buildable)
 from: mautic
 fromVersionConstraint: "^1.0.0"
-fromVersion: "1.1.0"
+fromVersion: "1.1.1"
 guidance: GUIDANCE.md
 
 labels:
